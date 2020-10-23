@@ -9,6 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const image = new Image;
 
+    let preloadWidth = parseInt(img.width) || "auto";
+    let preloadHeight = parseInt(img.height) || "auto";
+
+    if( isNaN( preloadWidth ) ) {
+      preloadWidth = "auto";
+    }
+
+    if( isNaN( preloadHeight ) ) {
+      preloadHeight = "auto";
+    }
+
     image.alt = alt;
     image.src = source;
 
