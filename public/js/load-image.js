@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     image.addEventListener('load', () => {
 
-      console.log("have been loaded");
-
       const parent = img.parentNode;
 
       parent.removeChild( img );

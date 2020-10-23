@@ -82,3 +82,28 @@ h3 {
 
   padding-left: 12px;
 }
+
+.primary-text {
+
+  font-size: var( --md );
+  letter-spacing: .08rem;
+  line-height: 2rem;
+}
+
+.address {
+
+  cursor: pointer;
+}
+
+
+.gmap-iframe {
+  display: none;
+  border: none;
+  outline: none;
+}
+
+.gmap-iframe.open {
+  display: block;
+  position: absolute;
+  z-index: 10;
+}

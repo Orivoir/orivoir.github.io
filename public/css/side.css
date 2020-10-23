@@ -15,23 +15,28 @@
   margin-right: 1vw;
 }
 
+
+.primary-side .compt ul ul.advanced li p::after ,
+.primary-side .compt ul ul.medium li p::after ,
+.primary-side .compt ul ul.starter li p::after {
+
+  display: inline-block;
+  margin-left: .5vw;
+  font-style: italic;
+  font-size: 16px;
+}
+
 .primary-side .compt ul ul.advanced li p::after {
 
   content: "(Avancé)";
-  display: inline-block;
-  margin-left: .5vw;
 }
 
 .primary-side .compt ul ul.medium li p::after {
   content: "(Intermédiaire)";
-  display: inline-block;
-  margin-left: .5vw;
 }
 
 .primary-side .compt ul ul.starter li p::after {
   content: "(Débutant)";
-  display: inline-block;
-  margin-left: .5vw;
 }
 
 .primary-side .compt ul ul.advanced,
