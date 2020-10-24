@@ -23,18 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.appendChild( iframe );
 
-  document.querySelector('.address')
-  .addEventListener('click', function() {
+  addrText =  document.querySelector('.address')
+
+  addrText.addEventListener('click', function() {
     iframe.classList.toggle("open");
     iframe.style.left = ( this.offsetLeft - ( iframe.offsetWidth ) ) + "px";
     iframe.style.top = ( this.offsetTop + ( this.offsetHeight ) ) + "px";
 
   } );
 
-  document.addEventListener('pointerdown', () => {
+  document.addEventListener('pointerdown', (e) => {
 
-    if(  iframe.classList.contains('open') ) {
-
+    if(  iframe.classList.contains('open') && e.target.nodeName.toLocaleLowerCase() !== "address") {
       iframe.classList.remove('open');
     }
 

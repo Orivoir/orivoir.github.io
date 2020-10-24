@@ -21,6 +21,11 @@ header .top .name span:first-child {
   font-weight: normal;
 }
 
+header .top .name span:last-child {
+
+  font-weight: 600;
+}
+
 header .top blockquote {
 
   font-size: var( --md );
@@ -42,6 +47,11 @@ header .contact ul {
 header .top figure img {
   width: 120px;
   height: auto;
+}
+
+header .address {
+
+  color: var(--link);
 }
 
 @media screen and ( max-width: 900px ), (max-height: 650px) {
