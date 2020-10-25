@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/side.css">
+
+    <!-- should change before push -->
+    <script>
+      const IS_DEV = true;
+
+      console.info(`client run as => ${IS_DEV ? "dev": "prod"}`);
+    </script>
   </head>
 
   <body
@@ -377,11 +384,26 @@
     </main>
 
     <script src="./public/js/load-image.js"></script>
-    <script src="./public/js/gmap.js"></script>
+    <!-- <script src="./public/js/gmap.js"></script> -->
     <script src="./public/js/btn-behavior.js"></script>
     <script src="./public/js/copy-on-clik.min.js"></script>
-    <script src="./public/js/magic-icons.js"></script>
 
-  </bodydata-select="Samuel>
+    <!-- fontawesome icon with manuel upgrade to pro version -->
+    <script defer src="./public/js/magic-icons.js"></script>
 
-</html>
+
+    <!-- <script src="./public/js/firebase.js"></script> -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+    <script src="./public/js/firebase.js"></script>
+
+  </body>
+
+</html>1
