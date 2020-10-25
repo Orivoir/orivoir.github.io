@@ -93,6 +93,26 @@ header .address {
 
 @media screen and ( max-width: 900px ), (max-height: 650px) {
 
+  #wrap-gmap::before {
+
+    display: none;
+  }
+
+  #wrap-gmap {
+    border-radius: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  #wrap-gmap iframe {
+
+    width: 90vw;
+    height: 80vh;
+  }
+
   header .top {
     flex-direction: column;
   }

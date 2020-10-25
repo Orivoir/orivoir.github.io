@@ -30,10 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
   addrText.addEventListener('click', function() {
     wrapGmap.classList.toggle("open");
 
-    wrapGmap.style.left = ( this.offsetLeft ) + "px";
-    wrapGmap.style.top = ( this.offsetTop + ( this.offsetHeight ) + 20 ) + "px";
-
   } );
+
+  window.addEventListener('resize', () => {
+    wrapGmap.classList.remove('open');
+  } )
 
   document.addEventListener('pointerdown', (e) => {
 
