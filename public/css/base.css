@@ -3,6 +3,7 @@
   --light: #ecf0f1;
   --primary: #81ecec;
   --link: #0984e3;
+  --error: #e74c3c;
 
   --xxl: 42px;
   --xl: 35px;
@@ -96,14 +97,37 @@ h3 {
 }
 
 
-.gmap-iframe {
-  display: none;
+.gmap-iframe-content {
+
   border: none;
   outline: none;
+}
+
+.gmap-iframe {
+  display: none;
 }
 
 .gmap-iframe.open {
   display: block;
   position: absolute;
   z-index: 10;
+}
+
+.btn, button {
+
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+.btn-close {
+  background: var( --error );
+  color: var( --light );
+  font-weight: 600;
+}
+
+
+#close-map {
+
+  margin: 3px 0;
 }

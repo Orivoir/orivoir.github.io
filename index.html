@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="./public/css/side.css">
   </head>
 
-  <body data-select="Samuel GABORIEAU Développeur web fullstack 06.42.42.28.35 <sam.gabor@hotmail.com> (http://github.com/orivoir)">
+  <body
+    data-select="Samuel GABORIEAU Développeur web fullstack 06.42.42.28.35 <sam.gabor@hotmail.com> (http://github.com/orivoir)"
+  >
 
     <header>
 
@@ -37,15 +39,17 @@
 
         <div>
           <figure>
-            <img
-              data-src="./public/images/identity.jpg"
-              data-alt="Samuel GABORIEAU"
-              alt="Loading..."
-              loading="lazy"
-              src="./public/images/loader.svg"
-              width="200"
-              height="auto"
-            >
+            <a href="https://github.com/orivoir">
+              <img
+                data-src="./public/images/identity.jpg"
+                data-alt="Samuel GABORIEAU"
+                alt="Loading..."
+                loading="lazy"
+                src="./public/images/loader.svg"
+                width="200"
+                height="auto"
+              >
+            </a>
           </figure>
         </div>
 
@@ -54,17 +58,20 @@
       <div class="contact">
         <ul>
           <li class="address">
-            <address>Lieu dit les clous</address>
-            <address>03170 Doyet</address>
+            <i class="fal fa-map-marker"></i>
+            <div>
+              <address>Lieu dit les clous</address>
+              <address>03170 Doyet</address>
+            </div>
           </li>
 
           <li>
-              <!-- tel font icon -->
-              <p>06.42.42.28.35</p>
+            <i class="fal fa-phone-alt"></i>
+            <p>06.42.42.28.35</p>
           </li>
 
           <li>
-            <!-- email font icon -->
+            <i class="fal fa-envelope-open-text"></i>
             <a href="mailto:sam.gabor@hotmail.com">sam.gabor@hotmail.com</a>
           </li>
         </ul>
@@ -73,6 +80,19 @@
     </header>
 
     <main>
+
+      <div id="wrap-gmap" class="gmap-iframe">
+        <div>
+          <button
+            data-btn-close="#wrap-gmap"
+            data-close-as="open" type="button"
+            class="btn-close"
+            id="close-map"
+          >
+            <i class="fal fa-times"></i>
+          </button>
+        </div>
+      </div>
 
       <section class="primary-side">
 
@@ -326,8 +346,10 @@
 
     <script src="./public/js/load-image.js"></script>
     <script src="./public/js/gmap.js"></script>
+    <script src="./public/js/btn-behavior.js"></script>
     <script src="./public/js/copy-on-clik.min.js"></script>
+    <script src="./public/js/magic-icons.js"></script>
 
-  </body>
+  </bodydata-select="Samuel>
 
 </html>

@@ -40,8 +40,24 @@ header .contact {
 header .contact ul {
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
+  /* align-items: center; */
+}
+
+header .contact ul li {
+
+  margin: 1.2vh 0;
+  display: flex;
   align-items: center;
+  font-size: var( --sm );
+}
+
+
+header .contact ul li i {
+
+  display: inline-block;
+  margin-right: .6vw;
+  font-size: var( --md );
 }
 
 header .top figure img {
@@ -52,6 +68,27 @@ header .top figure img {
 header .address {
 
   color: var(--link);
+}
+
+#wrap-gmap {
+
+  background: rgb( 42,42,42 );
+  border-radius: 5px;
+  padding: 20px;
+  border-top-left-radius: 0;
+}
+
+#wrap-gmap::before {
+
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 20px;
+  height: 15px;
+  background: rgb(42,42,42);
+
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 @media screen and ( max-width: 900px ), (max-height: 650px) {
@@ -68,17 +105,6 @@ header .address {
 
     font-size: var( --md );
     margin-bottom: .5vh;
-  }
-
-  header .contact ul {
-
-    flex-direction: column-reverse;
-  }
-
-
-  header .contact ul li {
-
-    margin: .85vh 0;
   }
 
 }

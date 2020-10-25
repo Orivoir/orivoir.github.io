@@ -15,27 +15,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const iframe = document.createElement('iframe');
 
-  iframe.classList.add('gmap-iframe');
+  // iframe.classList.add('');
   iframe.allowfullscreen = true;
   iframe.width = window.screen.width / 2
   iframe.height = window.screen.height / 2
   iframe.src = `https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${MY_ADDR}&zoom=14`;
+  iframe.classList.add('gmap-iframe-content');
 
-  document.body.appendChild( iframe );
+  const wrapGmap = document.querySelector("#wrap-gmap");
+  wrapGmap.appendChild( iframe );
 
-  addrText =  document.querySelector('.address')
+  addrText = document.querySelector('.address')
 
   addrText.addEventListener('click', function() {
-    iframe.classList.toggle("open");
-    iframe.style.left = ( this.offsetLeft - ( iframe.offsetWidth ) ) + "px";
-    iframe.style.top = ( this.offsetTop + ( this.offsetHeight ) ) + "px";
+    wrapGmap.classList.toggle("open");
+
+    wrapGmap.style.left = ( this.offsetLeft ) + "px";
+    wrapGmap.style.top = ( this.offsetTop + ( this.offsetHeight ) + 20 ) + "px";
 
   } );
 
   document.addEventListener('pointerdown', (e) => {
 
-    if(  iframe.classList.contains('open') && e.target.nodeName.toLocaleLowerCase() !== "address") {
-      iframe.classList.remove('open');
+    if(
+      wrapGmap.classList.contains('open') &&
+      e.target.nodeName.toLocaleLowerCase() !== "address" &&
+      wrapGmap !== e.target
+    ) {
+      wrapGmap.classList.remove('open');
     }
 
   } );
