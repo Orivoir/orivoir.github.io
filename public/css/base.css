@@ -5,6 +5,9 @@
   --link: #0984e3;
   --error: #e74c3c;
 
+  /* https://npmjs.com/ (primary color) */
+  --npm: #cc2c2c;
+
   --xxl: 42px;
   --xl: 35px;
   --lg: 30px;
@@ -126,6 +129,49 @@ h3 {
   font-weight: 600;
 }
 
+.mg-y-3 {
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mg-y-5 {
+
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.mg-y-7 {
+
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+a,button,img,span,i, strong {
+
+  display: inline-block;
+}
+
+.npm-logo {
+
+  color: var( --npm );
+  font-size: var( --xl );
+}
+
+.npm-para {
+  font-size: var( --md );
+}
+
+.npm-para a {
+
+  display: flex;
+  align-items: center;
+}
+
+.npm-para a span {
+
+  margin: 0 10px;
+}
 
 #close-map {
 
