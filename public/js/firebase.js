@@ -84,6 +84,10 @@
 
     }
 
+    window.db = {
+      contact: contactDb
+    }
+
   }
 
 } )();

@@ -12,10 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.appendChild( target );
 
-  document.querySelectorAll('[data-select]')
-  .forEach( element => {
-
-    element.addEventListener('click', function( event ) {
+  function onTrap( ) {
 
       // write data to copy inside entry point
       const text = this.getAttribute("data-select");
@@ -26,9 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // manual copy execute
       document.execCommand("copy");
+  }
 
+  const trapsTriggers = document.querySelectorAll('[data-select]');
+
+  function onDone() {
+
+    trapsTriggers.forEach( trap => {
+      trap.addEventListener('click', onTrap );
     } );
+  }
 
-  } );
+  function onAwait() {
+
+    trapsTriggers.forEach( trap => {
+      trap.removeEventListener( 'click', onTrap );
+    } );
+  }
+
+  document.addEventListener( "await", onAwait );
+  document.addEventListener('done', onDone );
+
+  document.dispatchEvent( new Event( "done" ) );
 
 } );

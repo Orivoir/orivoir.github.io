@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/side.css">
+    <link rel="stylesheet" href="./public/lib/notifications/custom-notification.css">
 
     <!-- should change before push -->
     <script>
@@ -23,6 +24,81 @@
   <body
     data-select="Samuel GABORIEAU Développeur web fullstack 06.42.42.28.35 <sam.gabor@hotmail.com> (http://github.com/orivoir)"
   >
+
+    <div id="box-notifications"></div>
+
+    <div id="wrap-contact">
+
+      <button
+        id="btn-close-contact"
+        data-btn-close="#wrap-contact"
+        data-close-as="open"
+        class="btn-close mg-y-3 mg-x-3"
+      >
+        <i class="fal fa-times"></i>
+      </button>
+
+      <form method="POST" id="form-contact">
+
+        <div class="form-field">
+          <label for="owner">
+            auteur
+            <i class="far fa-asterisk"></i>
+          </label>
+          <input
+            type="text"
+            name="owner"
+            id="owner"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="object">
+            sujet
+            <i class="far fa-asterisk"></i>
+          </label>
+          <input
+            type="text"
+            name="object"
+            id="object"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="email">
+            e-mail de réponse
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            id="email"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="message">
+            message
+            <i class="far fa-asterisk"></i>
+          </label>
+          <textarea
+            name="message"
+            id="message"
+            spellcheck="false"
+          >Hi world!</textarea>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="btn-primary"
+          >
+            <i class="fal fa-paper-plane"></i>
+          </button>
+        </div>
+
+      </form>
+    </div>
 
     <header>
 
@@ -383,10 +459,30 @@
 
     </main>
 
+    <footer>
+      <ul>
+        <li>
+          <button
+            id="btn-open-contact"
+            type="button"
+            class="btn-primary"
+          >
+            contact
+          </button>
+        </li>
+
+        <!-- linked in -->
+
+        <!-- github -->
+
+        <!-- profil npm -->
+      </ul>
+    </footer>
+
     <script src="./public/js/load-image.js"></script>
-    <!-- <script src="./public/js/gmap.js"></script> -->
+    <script src="./public/js/gmap.js"></script>
     <script src="./public/js/btn-behavior.js"></script>
-    <script src="./public/js/copy-on-clik.min.js"></script>
+    <script src="./public/js/copy-on-click.js"></script>
 
     <!-- fontawesome icon with manuel upgrade to pro version -->
     <script defer src="./public/js/magic-icons.js"></script>
@@ -403,7 +499,19 @@
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
 
     <script src="./public/js/firebase.js"></script>
+    <script src="./public/js/contact.js"></script>
+    <script src="./public/lib/notifications/custom-notification.js"></script>
+
+    <script>
+
+      CustomNotification.setMaxNotification( 3 );
+
+      document.addEventListener('DOMContentLoaded', () => {
+        CustomNotification.setBoxNotification( document.querySelector( "#box-notifications" ) )
+      } );
+
+    </script>
 
   </body>
 
-</html>1
+</html>
