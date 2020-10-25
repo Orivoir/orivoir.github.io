@@ -44,6 +44,11 @@ header .contact ul {
   /* align-items: center; */
 }
 
+header .contact ul li.address .addr-content {
+
+  cursor: pointer;
+}
+
 header .contact ul li {
 
   margin: 1.2vh 0;

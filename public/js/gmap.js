@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const wrapGmap = document.querySelector("#wrap-gmap");
   wrapGmap.appendChild( iframe );
 
-  addrText = document.querySelector('.address')
+  addrText = document.querySelector('.addr-content')
 
   addrText.addEventListener('click', function() {
     wrapGmap.classList.toggle("open");
