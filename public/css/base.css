@@ -1,7 +1,6 @@
 :root {
 
   --light: #ecf0f1;
-  --primary: #81ecec;
   --link: #0984e3;
   --error: #e74c3c;
 
@@ -124,6 +123,46 @@ h3 {
   font-weight: 600;
 }
 
+.btn-primary {
+
+  background: transparent;
+  border: 2px solid var( --link );
+  color: var( --link );
+  font-weight: 600;
+
+  font-size: var( --md );
+}
+
+.btn-npm {
+
+  background: transparent;
+  border: 2px solid var( --npm );
+  color: var( --npm );
+  font-weight: 600;
+
+  font-size: var( --xl );
+}
+
+.btn-gh {
+
+  background: transparent;
+  border: 2px solid rgb( 42,42,42 );
+  color: rgb( 42,42,42 );
+  font-weight: 600;
+
+  font-size: var( --xl );
+}
+
+.btn-li {
+
+  background: transparent;
+  border: 2px solid #0073b1;
+  color: #0073b1;
+  font-weight: 600;
+
+  font-size: var( --xl );
+}
+
 .mg-y-3 {
 
   margin-top: 5px;
@@ -171,4 +210,126 @@ a,button,img,span,i, strong {
 #close-map {
 
   margin: 3px 0;
+}
+
+#wrap-contact {
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: var( --light );
+  border: 8px solid rgb( 42,42,42 );
+  z-index: 11;
+  display: none;
+}
+
+#wrap-contact.open {
+  display: block;
+}
+
+#wrap-contact.pending::before {
+
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./../images/loader.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: rgba( 0,0,0,.93 );
+}
+
+#form-contact {
+
+  background: rgba( 0,0,0,.065 );
+  width: 60%;
+  margin: 4vh auto;
+  min-width: 300px;
+  padding: 8px;
+  border-radius: 3px;
+  height: 75vh;
+  min-height: 200px;
+  overflow: auto;
+}
+
+#form-contact textarea {
+
+  resize: none;
+}
+
+#form-contact .form-field {
+
+  display: flex;
+  flex-direction: column;
+  margin: 1.42vh 0;
+}
+
+
+.mg-x-3 {
+
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#form-contact .form-field input,
+#form-contact .form-field textarea {
+
+  padding: 4px;
+  display: inline-block;
+  margin: 4px 0;
+  border: 1px solid rgb( 62,62,62 );
+  outline: none;
+  border-radius: 3px;
+}
+
+#form-contact .form-field input:focus,
+#form-contact .form-field textarea:focus {
+
+  border: 1px solid var( --link );
+}
+
+#form-contact .form-field.error input,
+#form-contact .form-field.error textarea {
+
+  border: 1px solid var( --npm );
+}
+
+
+#form-contact .form-field label {
+
+  color: rgb( 62,62,62 );
+  font-size: var( --sm );
+  font-style: italic;
+}
+
+/* #form-contact .form-field */
+
+#form-contact .form-field label i {
+
+  color: var( --npm );
+  font-size: var( --x-sm );
+}
+
+#form-contact {
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+#box-notifications {
+
+  width: 33%;
+  min-width: 300px;
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  z-index: 15;
 }
