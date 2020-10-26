@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/side.css">
+    <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/lib/notifications/custom-notification.css">
 
     <!-- should change before push -->
     <script>
-      const IS_DEV = true;
-
+      const IS_DEV = false;
       console.info(`client run as => ${IS_DEV ? "dev": "prod"}`);
     </script>
   </head>
@@ -471,6 +471,24 @@
           </button>
         </li>
 
+        <li>
+          <a href="https://www.linkedin.com/in/samuel-g-6b5a9b197/" class="btn btn-primary">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/orivoir" target="_blank" class="btn btn-gh">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://npmjs.com/~orivoir21" target="_blank" class="btn btn-npm">
+            <i class="fab fa-npm"></i>
+          </a>
+        </li>
+
         <!-- linked in -->
 
         <!-- github -->
@@ -497,6 +515,8 @@
         https://firebase.google.com/docs/web/setup#available-libraries -->
 
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script> -->
 
     <script src="./public/js/firebase.js"></script>
     <script src="./public/js/contact.js"></script>

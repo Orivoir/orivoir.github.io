@@ -133,6 +133,36 @@ h3 {
   font-size: var( --md );
 }
 
+.btn-npm {
+
+  background: transparent;
+  border: 2px solid var( --npm );
+  color: var( --npm );
+  font-weight: 600;
+
+  font-size: var( --xl );
+}
+
+.btn-gh {
+
+  background: transparent;
+  border: 2px solid rgb( 42,42,42 );
+  color: rgb( 42,42,42 );
+  font-weight: 600;
+
+  font-size: var( --xl );
+}
+
+.btn-li {
+
+  background: transparent;
+  border: 2px solid #0073b1;
+  color: #0073b1;
+  font-weight: 600;
+
+  font-size: var( --xl );
+}
+
 .mg-y-3 {
 
   margin-top: 5px;
@@ -223,6 +253,9 @@ a,button,img,span,i, strong {
   min-width: 300px;
   padding: 8px;
   border-radius: 3px;
+  height: 75vh;
+  min-height: 200px;
+  overflow: auto;
 }
 
 #form-contact textarea {

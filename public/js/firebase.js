@@ -80,13 +80,14 @@
         console.warn("firestore error cant get docs at: " + collectionName );
         console.error( error );
         throw "firestore dont work";
+
       } );
 
     }
 
     window.db = {
       contact: contactDb
-    }
+    };
 
   }
 
