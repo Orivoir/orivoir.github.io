@@ -4,8 +4,11 @@
   --link: #0984e3;
   --error: #e74c3c;
 
-  /* https://npmjs.com/ (primary color) */
   --npm: #cc2c2c;
+  --js: #efd81d;
+  --sass: #c76494;
+  --bootstrap: #533b78;
+  --nodejs: #77b063;
 
   --xxl: 42px;
   --xl: 35px;
@@ -13,6 +16,26 @@
   --md: 25px;
   --sm: 20px;
   --x-sm: 16px;
+}
+
+.f-size-md {
+  font-size: var(--md);
+}
+.f-size-xl {
+
+  font-size: var(--xl);
+}
+.f-size-xxl {
+
+  font-size: var(--xxl);
+}
+.f-size-sm {
+
+  font-size: var(--sm);
+}
+.f-size-x-sm {
+
+  font-size: var(--x-sm);
 }
 
 * {
@@ -332,4 +355,70 @@ a,button,img,span,i, strong {
   top: 5px;
   right: 5px;
   z-index: 15;
+}
+
+.flex {
+
+  display: flex;
+}
+
+.center-primary {
+  justify-content: center;
+}
+
+.center-secondary {
+  align-items: center;
+}
+
+.row-reverse {
+
+  flex-direction: row-reverse;
+}
+
+.col-reverse {
+
+  flex-direction: column-reverse;
+}
+
+section.exp ul li {
+
+  margin: 8vh 0;
+}
+
+
+section ul li h3 {
+
+  font-size: var( --md );
+}
+
+
+section.exp ul li:first-child {
+
+  margin-top: 0;
+}
+
+.divers ul li {
+
+  padding-left: 12px;
+}
+
+.icon-npm {
+
+  color: var( --npm );
+}
+
+.icon-sass {
+
+  color: var( --sass );
+}
+
+.icon-bootstrap {
+
+  color: var( --bootstrap );
+}
+
+.icon-nodejs {
+
+  color: var( --nodejs );
+  /* font-weight: bold; */
 }
