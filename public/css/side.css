@@ -52,6 +52,16 @@
   flex-direction: column;
 }
 
+ul.enjoy-list > li {
+
+  margin: 2vh 0;
+}
+
+ul.enjoy-list ul li {
+
+  margin: 1.25vh 0;
+}
+
 @media screen and (max-width: 800px), (max-height: 450px) {
 
   .primary-side h3,

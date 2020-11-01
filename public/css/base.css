@@ -284,6 +284,9 @@ a,button,img,span,i, strong {
 #form-contact textarea {
 
   resize: none;
+  height: 12.5vh;
+  min-height: 60px;
+  max-height: 180px;
 }
 
 #form-contact .form-field {
@@ -422,3 +425,4 @@ section.exp ul li:first-child {
   color: var( --nodejs );
   /* font-weight: bold; */
 }
+
