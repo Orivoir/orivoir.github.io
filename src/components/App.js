@@ -17,7 +17,7 @@ const App = () => {
     <Address />
 
     <Container>
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
           <Box sx={{
             bgcolor: theme => theme.palette.background.paper,
             color: theme => theme.palette.text.primary,

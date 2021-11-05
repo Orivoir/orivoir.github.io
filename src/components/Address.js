@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import RoomIcon from '@mui/icons-material/Room';
+import Link from '@mui/material/Link';
 
 const Address = () => {
   return (
@@ -24,7 +25,10 @@ const Address = () => {
       <Box sx={{display: "flex", alignItems: "center"}}>
         <AlternateEmailIcon />
         <Typography sx={{marginLeft: theme => theme.spacing(1)}} variant="subtitle1">
-          sam.gabor@hotmail.com
+
+          <Link color="inherit" sx={{textDecoration: "none"}} href="mailto:sam.gabor@hotmail.com">
+            sam.gabor@hotmail.com
+          </Link>
         </Typography>
       </Box>
 

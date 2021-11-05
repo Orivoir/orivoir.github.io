@@ -41,7 +41,7 @@ const Header = () => {
             </IconButton>
           </Box>
 
-          <IconButton sx={{margin: theme => theme.spacing(2)}}>
+          <IconButton sx={{margin: theme => theme.spacing(2)}} href="https://www.linkedin.com/in/samuel-gaborieau/" target="_blank">
             <LinkedInIcon sx={{color: "#0077b7"}} />
           </IconButton>
 

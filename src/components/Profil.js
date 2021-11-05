@@ -12,9 +12,10 @@ const Profil = () => {
 
       <Typography variant="subtitle1" sx={{
           marginLeft: theme => theme.spacing(2),
-          fontSize: 18,
-          lineHeight: "2.25rem",
-          letterSpacing: ".12rem"
+
+          fontSize: {sm: 18, md: 18, lg: 18, xs: 16},
+          lineHeight: {md: "2.25rem", lg: "2.25rem", sm: "2.25rem", xs: "1.9rem"},
+          letterSpacing: {md: ".12rem", lg: ".12rem", sm: ".12rem", xs: ".085rem"}
       }}>
         Passionné du web j'exploite le libre accès.<br />
         Je débute mon parcours sur <strong>Openclassrooms</strong>,<br />
