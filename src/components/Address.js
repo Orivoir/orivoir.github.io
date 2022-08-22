@@ -13,10 +13,9 @@ const Address = () => {
       display: "flex",
       justifyContent: "space-around",
       padding: theme => theme.spacing(2),
-      flexWrap: "wrap",
       flexDirection: {
         xs: "column",
-        sm: "row",
+        sm: "column",
         md: "row",
         lg: "row"
       }
