@@ -1,9 +1,42 @@
 {
+  "name": "orivoir.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "dev": "npx  concurrently \"npx lite-server\" \"npm run build\"",
+    "build": "npx esbuild \"src/**/*\" --bundle --minify --format=cjs --sourcemap --bundle --outdir=dist --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orivoir/orivoir.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orivoir/orivoir.github.io/issues"
+  },
+  "homepage": "https://github.com/Orivoir/orivoir.github.io#readme",
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "esbuild": "^0.23.1",
+    "eslint": "^9.10.0",
+    "eslint-plugin-react": "^7.36.1",
+    "globals": "^15.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.6.0"
+  },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@fontsource/roboto": "^5.1.0",
     "@mui/icons-material": "^6.1.0",
-    "@mui/material": "^6.1.0"
+    "@mui/material": "^6.1.0",
+    "@typescript-eslint/typescript-estree": "^8.6.0",
+    "react-router-dom": "^6.26.2"
   }
 }
