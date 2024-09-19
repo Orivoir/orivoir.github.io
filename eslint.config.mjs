@@ -10,7 +10,15 @@ export default [
   pluginReact.configs.flat.recommended,
   {
     rules: {
-      semi: ['error', 'never']
+      semi: ['error', 'never'],
+
+      // minimize bundle size MUI ->  https://mui.com/material-ui/guides/minimizing-bundle-size/#development-environment
+      "no-restricted-imports": [
+        "error",
+        {
+          "patterns": ["@mui/*/*/*"]
+        }
+      ]
 
     }
   }
