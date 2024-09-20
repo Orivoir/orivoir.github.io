@@ -12,11 +12,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DownloadIcon from '@mui/icons-material/Download';
 import SchoolIcon from '@mui/icons-material/School';
+import ActionToggleTheme from './actionToggleTheme';
 
 
 
 
-function ResponsiveAppBar() { 
+export default function Header() {
 
   return (
     <AppBar position="static">
@@ -60,6 +61,8 @@ function ResponsiveAppBar() {
         <Box sx={{flexGrow: 1}} />
 
         <Box>
+            <ActionToggleTheme />
+
             <Tooltip title="mon profil Github">
                 <IconButton href="https://github.com/orivoir">
                     <GitHubIcon />
@@ -67,7 +70,7 @@ function ResponsiveAppBar() {
             </Tooltip>
 
             <Tooltip title="mon profil Linked'in">
-                <IconButton href="edin.com/in/samuel-gaborieau-597676326/">
+                <IconButton href="https://www.linkedin.com/in/samuel-gaborieau-597676326/">
                     <LinkedInIcon />
                 </IconButton>
             </Tooltip>
@@ -91,4 +94,3 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;

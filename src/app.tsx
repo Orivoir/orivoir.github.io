@@ -5,18 +5,26 @@ import createTheme from "./theme"
 import {KEY_THEME_MODE} from "./helper"
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from './header'
+import Routing from './routing'
+import withToggleTheme from "./withToggleTheme"
+import TopLevelNavigation from "./topLevelNavigation"
 
 const App = () => {
 
-    const [themeMode, setThemeMode] = React.useState<"dark" | "light">(
-        localStorage.getItem(KEY_THEME_MODE) as "dark" | "light" | undefined || "light"
-    )
-    const theme = createTheme("dark")
+    const defaultThemeMode = localStorage.getItem(KEY_THEME_MODE) as "dark" | "light" | undefined || "light"
+
+    const themeState = React.useState<"dark" | "light">(defaultThemeMode)
+    
+    const theme = withToggleTheme({
+        themeMode: defaultThemeMode,
+        themeState
+    })
 
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <Header />
+            <Routing />
         </ThemeProvider>
     )
 }
