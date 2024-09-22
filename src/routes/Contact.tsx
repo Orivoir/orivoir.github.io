@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Contact() {
 
-    return (
-        <Typography>Contact</Typography>
-    )
+  return (
+    <Typography>Contact</Typography>
+  )
 }

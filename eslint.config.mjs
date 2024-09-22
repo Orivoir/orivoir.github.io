@@ -11,6 +11,8 @@ export default [
   {
     rules: {
       semi: ['error', 'never'],
+      indent: ['error', 2],
+      quotes: ['error', 'single'],
 
       // minimize bundle size MUI ->  https://mui.com/material-ui/guides/minimizing-bundle-size/#development-environment
       "no-restricted-imports": [

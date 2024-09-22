@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Ressources() {
 
-    return (
-        <Typography>Ressources</Typography>
-    )
+  return (
+    <Typography>Ressources</Typography>
+  )
 }

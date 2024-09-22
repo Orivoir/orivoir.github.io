@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Carrier() {
 
-    return (
-        <Typography>Carrier</Typography>
-    )
+  return (
+    <Typography>Carrier</Typography>
+  )
 }

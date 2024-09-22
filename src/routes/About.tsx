@@ -1,9 +1,11 @@
-import { Typography } from '@mui/material'
 import React from 'react'
+import Overview from './About/Overview'
 
 export default function About() {
 
-    return (
-        <Typography>About</Typography>
-    )
+  return (
+    <>
+      <Overview />
+    </>
+  )
 }
